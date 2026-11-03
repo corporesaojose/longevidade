@@ -6,7 +6,7 @@ export interface Props {
 
 const {
   title = "2º Workshop de Saúde Corpore | Seu Futuro Começa Agora — 15/11/2026",
-  description = "Força, memória e autonomia depois dos 40. Encontro presencial com a Dra. Paloma Ratto, médica geriatra. 15 de novembro, domingo, 9h30 às 12h. 40 vagas. Corpore Training Gym, São José dos Campos.",
+  description = "Força, memória e autonomia depois dos 40. Encontro presencial com a Dra. Paloma Ratto, médica geriatra. 15 de novembro, domingo, 9h30 às 12h. 40 vagas. Corpore, São José dos Campos.",
 } = Astro.props;
 ---
 
@@ -34,7 +34,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Corpore Training Gym" />
+    <meta property="og:site_name" content="Corpore" />
 
     <!-- Meta Pixel Base Code -->
     <script is:inline>
@@ -58,7 +58,7 @@ const {
       "maximumAttendeeCapacity": 40,
       "location": {
         "@type": "Place",
-        "name": "Corpore Training Gym",
+        "name": "Corpore",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Av. Barão do Rio Branco, 540",
@@ -74,7 +74,7 @@ const {
       },
       "organizer": {
         "@type": "Organization",
-        "name": "Corpore Training Gym",
+        "name": "Corpore",
         "url": "https://corporetraininggym.com.br"
       }
     })} />

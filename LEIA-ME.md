@@ -73,4 +73,4 @@ landing-page/
 
 ---
 
-*Corpore Training Gym — 2º Workshop de Saúde · 15/11/2026*
+*Corpore — 2º Workshop de Saúde · 15/11/2026*
