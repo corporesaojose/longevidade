@@ -16,8 +16,10 @@ const EVENTO = {
   investimento: "A definir",
   convidada: "Dra. Paloma Ratto",
   especialidade: "Médica geriatra",
-  // Coloque a foto oficial em public/ com este nome. Sem a foto, o site mostra um cartão com as iniciais.
-  fotoConvidada: "/foto-dra-paloma.jpg",
+  // Foto em public/ (WebP 4:5). A versão -480 é carregada em telas pequenas.
+  // Sem a foto, o site mostra um cartão com as iniciais.
+  fotoConvidada: "/foto-dra-paloma.webp",
+  fotoConvidadaSrcset: "/foto-dra-paloma-480.webp 480w, /foto-dra-paloma.webp 704w",
 };
 
 const desejos = [
@@ -249,8 +251,12 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
             <div style="border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); position: relative; background: linear-gradient(160deg, rgba(70,121,154,0.35), rgba(0,180,200,0.12));">
               <img
                 src={EVENTO.fotoConvidada}
+                srcset={EVENTO.fotoConvidadaSrcset}
+                sizes="(max-width: 899px) 92vw, 480px"
+                width="704" height="880"
+                fetchpriority="high"
                 alt="Dra. Paloma Ratto, médica geriatra"
-                style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; display: block;"
+                style="width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center top; display: block;"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
               <!-- Fallback enquanto a foto oficial não chega -->
@@ -424,8 +430,13 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
             <div style="border-radius: 24px; overflow: hidden; background: var(--gradient-dark); box-shadow: 0 20px 60px rgba(62,62,61,0.15);">
               <img
                 src={EVENTO.fotoConvidada}
+                srcset={EVENTO.fotoConvidadaSrcset}
+                sizes="(max-width: 899px) 92vw, 400px"
+                width="704" height="880"
+                loading="lazy"
+                decoding="async"
                 alt="Dra. Paloma Ratto, médica geriatra"
-                style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; display: block;"
+                style="width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center top; display: block;"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
               <div style="display: none; width: 100%; aspect-ratio: 4/5; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">

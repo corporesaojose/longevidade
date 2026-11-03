@@ -27,8 +27,8 @@ Depois do build, **faça upload da pasta `dist/`** para o subdomínio do novo ev
 
 ## Pendências antes de publicar
 
-1. **Foto da Dra. Paloma** — salve a foto oficial em `public/foto-dra-paloma.jpg`.
-   Sem ela o site mostra um cartão com as iniciais "PR" (já fica apresentável).
+1. ~~**Foto da Dra. Paloma**~~ — feito: `public/foto-dra-paloma.webp` (704×880, 25 KB) e `foto-dra-paloma-480.webp` (480×600, 16 KB) para celular.
+   Para trocar, substitua os dois arquivos mantendo o formato 4:5 (vertical).
 2. **Webhook do formulário no n8n** — o site envia a inscrição para
    `https://n8n.corporetraininggym.com.br/webhook/workshop-saude-inscricao`.
    Esse endereço precisa de um workflow próprio (cópia do "Workshop Sono → Planilha + ChatGuru")
@@ -55,7 +55,8 @@ landing-page/
 ├── public/
 │   ├── logo-branco.png
 │   ├── logo-amarelo-icone.png
-│   └── foto-dra-paloma.jpg      ← adicionar
+│   ├── foto-dra-paloma.webp
+│   └── foto-dra-paloma-480.webp
 ├── src/
 │   ├── layouts/Layout.astro     ← meta tags, Pixel, schema do evento
 │   ├── pages/index.astro        ← página (12 seções) + script do formulário
