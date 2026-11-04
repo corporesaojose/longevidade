@@ -6,7 +6,7 @@ export interface Props {
 
 const {
   title = "2º Workshop de Saúde Corpore | Seu Futuro Começa Agora — 15/11/2026",
-  description = "Força, memória e autonomia depois dos 40. Encontro presencial com a Dra. Paloma Ratto, médica geriatra. 15 de novembro, domingo, 9h30 às 12h. 40 vagas. Corpore, São José dos Campos.",
+  description = "Força, memória e autonomia depois dos 40. Encontro presencial com a Dra. Paloma Ratto, médica geriatra. 15 de novembro, domingo, 9h30 às 12h. 40 vagas. Investimento R$ 60. Corpore, São José dos Campos.",
 } = Astro.props;
 ---
 
@@ -45,7 +45,6 @@ const {
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1841018156120390&ev=PageView&noscript=1" /></noscript>
 
     <!-- Schema.org -->
-    <!-- Investimento ainda a definir: quando tiver valor, adicionar o bloco "offers" aqui. -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Event",
@@ -71,6 +70,13 @@ const {
         "@type": "Person",
         "name": "Dra. Paloma Ratto",
         "jobTitle": "Médica geriatra"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "60",
+        "priceCurrency": "BRL",
+        "url": "https://workshop.corporetraininggym.com.br/",
+        "availability": "https://schema.org/LimitedAvailability"
       },
       "organizer": {
         "@type": "Organization",

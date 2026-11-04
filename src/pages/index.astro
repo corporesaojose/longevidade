@@ -13,7 +13,7 @@ const EVENTO = {
   dataCurta: "15 de novembro",
   horario: "9h30 às 12h",
   vagas: 40,
-  investimento: "A definir",
+  investimento: "R$ 60",
   convidada: "Dra. Paloma Ratto",
   especialidade: "Médica geriatra",
   // Foto em public/ (WebP 4:5). A versão -480 é carregada em telas pequenas.
@@ -63,7 +63,7 @@ const detalhes = [
   { icon: "🕘", label: "Horário", value: "9h30 às 12h" },
   { icon: "📍", label: "Local", value: "Corpore · Av. Barão do Rio Branco, 540 — Jardim Esplanada — São José dos Campos/SP" },
   { icon: "🔒", label: "Vagas", value: "40 participantes" },
-  { icon: "💰", label: "Investimento", value: "A definir" },
+  { icon: "💰", label: "Investimento", value: "R$ 60 por pessoa" },
   { icon: "👥", label: "Público", value: "Pessoas interessadas em envelhecimento saudável, prevenção, longevidade e construção de saúde, independentemente de já praticarem atividade física" },
 ];
 
@@ -94,7 +94,7 @@ const faqs = [
   },
   {
     q: "Qual o investimento?",
-    a: "O valor será informado pela equipe da Corpore assim que estiver definido.",
+    a: "O investimento é de R$ 60 por pessoa. Depois de preencher o cadastro, você recebe pelo WhatsApp da Corpore as orientações de pagamento e a confirmação da vaga.",
   },
 ];
 
@@ -230,6 +230,9 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
                 <span class="pill-tag" style="background: rgba(0,180,200,0.12); border: 1px solid rgba(0,180,200,0.22); color: var(--color-teal);">
                   <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--color-teal); flex-shrink: 0;"></span>
                   40 vagas
+                </span>
+                <span class="pill-tag" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.8);">
+                  R$ 60
                 </span>
                 <span class="pill-tag" style="background: rgba(226,222,30,0.15); border: 1px solid rgba(226,222,30,0.35); color: var(--color-yellow); font-weight: 700;">
                   📍 Evento presencial
@@ -528,7 +531,7 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
           </p>
           <p style="font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.8); line-height: 1.7;">
             Domingo, 15 de novembro de 2026 · 9h30 às 12h<br />
-            Corpore — São José dos Campos · <span style="color: var(--color-yellow);">40 vagas</span>
+            Corpore — São José dos Campos · <span style="color: var(--color-yellow);">40 vagas · R$ 60</span>
           </p>
         </div>
 
@@ -587,7 +590,7 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
             Após preencher o formulário, você será direcionado ao WhatsApp da Corpore para receber as informações sobre sua participação e a confirmação da vaga.
           </p>
           <p style="text-align: center; font-size: 0.74rem; color: rgba(255,255,255,0.35); line-height: 1.5;">
-            Investimento a definir. O preenchimento do cadastro não garante automaticamente a inscrição.
+            Investimento: R$ 60 por pessoa. O preenchimento do cadastro não garante automaticamente a inscrição.
           </p>
         </form>
       </div>
@@ -657,7 +660,7 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
             <p class="reveal" style="font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 36px;">
               Um encontro presencial, com 40 vagas, para aprender, tirar dúvidas e sair com o seu primeiro passo definido.
             </p>
-            <a href="#formulario" class="reveal btn-primary">Quero participar do workshop</a>
+            <a href="#formulario" class="reveal btn-primary">Quero participar do workshop · R$ 60</a>
           </div>
 
           <div class="reveal" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 16px 28px;">
@@ -736,7 +739,7 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
             Quero participar do workshop
           </a>
           <p style="font-size: 0.85rem; color: rgba(255,255,255,0.45); font-weight: 500;">
-            15 de novembro · 9h30 · Corpore
+            15 de novembro · 9h30 · Corpore · R$ 60
           </p>
           <p style="font-size: 0.88rem; color: rgba(255,255,255,0.5);">
             Dúvidas? Entre em contato pelo WhatsApp da Corpore.

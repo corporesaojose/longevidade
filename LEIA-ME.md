@@ -2,7 +2,7 @@
 ## Seu Futuro Começa Agora · 15/11/2026 (domingo) · 9h30 às 12h
 
 Duplicado do site do Workshop de Sono (sono.corporetraininggym.com.br), mesma base visual e técnica.
-Convidada: Dra. Paloma Ratto, médica geriatra. 40 vagas. Investimento a definir.
+Convidada: Dra. Paloma Ratto, médica geriatra. 40 vagas. Investimento: R$ 60 por pessoa.
 
 ---
 
@@ -35,9 +35,7 @@ Depois do build, **faça upload da pasta `dist/`** para o subdomínio do novo ev
    com planilha nova e o `dialog_id` do diálogo deste workshop no ChatGuru.
    **Não usar** o webhook `workshop-sono-inscricao`: ele grava na planilha do sono e manda a
    mensagem de boas-vindas do sono no WhatsApp.
-3. **Investimento** — quando o valor for definido, atualizar no `src/pages/index.astro`
-   (objeto `EVENTO`, lista `detalhes`, FAQ e textos do formulário) e adicionar `offers` no
-   schema do `src/layouts/Layout.astro`.
+3. ~~**Investimento**~~ — feito: R$ 60 (objeto `EVENTO`, detalhes, FAQ, formulário, CTAs e `offers` no schema).
 
 ---
 
