@@ -29,12 +29,10 @@ Depois do build, **faça upload da pasta `dist/`** para o subdomínio do novo ev
 
 1. ~~**Foto da Dra. Paloma**~~ — feito: `public/foto-dra-paloma.webp` (704×880, 25 KB) e `foto-dra-paloma-480.webp` (480×600, 16 KB) para celular.
    Para trocar, substitua os dois arquivos mantendo o formato 4:5 (vertical).
-2. **Webhook do formulário no n8n** — o site envia a inscrição para
-   `https://n8n.corporetraininggym.com.br/webhook/workshop-saude-inscricao`.
-   Esse endereço precisa de um workflow próprio (cópia do "Workshop Sono → Planilha + ChatGuru")
-   com planilha nova e o `dialog_id` do diálogo deste workshop no ChatGuru.
-   **Não usar** o webhook `workshop-sono-inscricao`: ele grava na planilha do sono e manda a
-   mensagem de boas-vindas do sono no WhatsApp.
+2. ~~**Webhook do formulário no n8n**~~ — feito: workflow "Workshop Saúde 40+ → Planilha + ChatGuru"
+   (n8n, ID YpRHeav6BPUfMVoz), ativo em `/webhook/workshop-saude-inscricao`. Grava na planilha
+   "2º Workshop de Saúde - Inscrições" (Google Drive da corpore.saojose) e manda a mensagem de
+   boas-vindas pelo ChatGuru (chat_add para contato novo; message_send se o contato já existir).
 3. ~~**Investimento**~~ — feito: R$ 60 (objeto `EVENTO`, detalhes, FAQ, formulário, CTAs e `offers` no schema).
 
 ---
