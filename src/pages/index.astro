@@ -929,11 +929,20 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
   // para o Meta deduplicar browser + servidor.
   // ============================================================
   const N8N_WEBHOOK = 'https://n8n.corporetraininggym.com.br/webhook/health-map-lead';
-  // Abre a conversa SEM texto pre-preenchido: a mensagem de confirmacao ja e
-  // disparada pelo dialogo do ChatGuru assim que a inscricao chega no n8n.
+  // Abre a conversa JA com uma mensagem pronta de quem se inscreveu: a pessoa so
+  // toca em enviar e a equipe recebe o contato no WhatsApp da Corpore.
   // Nao usar links /link/... de anuncio aqui — eles carregam o texto
   // "Vi no Instagram...", que e do anuncio, nao de quem ja se inscreveu.
   const LINK_WHATSAPP = 'https://wa.me/551239094444';
+
+  function linkWhatsappInscricao(nome: string): string {
+    const primeiroNome = nome.split(/\s+/)[0] || nome;
+    const texto =
+      'Olá! Meu nome é ' + primeiroNome + ' e acabei de me inscrever pelo site no ' +
+      '2º Workshop de Saúde Corpore (15/11, 9h30). ' +
+      'Gostaria de receber as informações para confirmar minha vaga.';
+    return LINK_WHATSAPP + '?text=' + encodeURIComponent(texto);
+  }
 
   // Identificacao do evento: vai no campo "origem" da planilha e do CAPI.
   const ORIGEM_EVENTO = 'workshop-saude-40';
@@ -1383,6 +1392,6 @@ const h2Dark = "font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; lette
       new Promise((resolve) => setTimeout(resolve, 3000)),
     ]);
 
-    window.location.href = LINK_WHATSAPP;
+    window.location.href = linkWhatsappInscricao(nome);
   });
 </script>
